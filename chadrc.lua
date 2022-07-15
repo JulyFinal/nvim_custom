@@ -1,5 +1,7 @@
 local M = {}
 
+-- local override = require "custom.override"
+
 M.ui = {
    theme = "aquarium",
 }
@@ -22,11 +24,6 @@ M.plugins = {
    user = require "custom.plugins",
 }
 
--- M.ui = {
---    theme = "gruvchad",
---    hl_add = require "custom.highlights",
---    theme_toggle = { "gruvchad", "gruvbox_light" },
--- }
 
 M.mappings = require "custom.mappings"
 M.init = require "custom.init"
