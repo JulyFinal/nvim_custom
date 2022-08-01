@@ -22,11 +22,38 @@ M.word_find = {
 
 M.fast_word = {
   n = {
-    ["<leader>ww"] = {
+    ["<leader>s"] = {
       function()
         require("hop").hint_char1()
       end,
       "Fast Find Word",
+    },
+  },
+}
+
+M.save = {
+  n = {
+    ["<leader>w"] = {
+      "<Cmd>w<CR>",
+      "Save File",
+    },
+  },
+}
+
+M.save_and_quit = {
+  n = {
+    ["<leader>qq"] = {
+      "<Cmd>wq<CR>",
+      "Save File",
+    },
+  },
+}
+
+M.save_and_quit_all = {
+  n = {
+    ["<leader>qa"] = {
+      "<Cmd>wqa<CR>",
+      "Save File",
     },
   },
 }

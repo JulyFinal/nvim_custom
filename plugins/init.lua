@@ -46,11 +46,11 @@ return {
   },
 
   -- AutoSave
-  ["Pocco81/AutoSave.nvim"] = {
-    config = function()
-      require("autosave").setup {}
-    end,
-  },
+  -- ["Pocco81/AutoSave.nvim"] = {
+  --   config = function()
+  --     require("autosave").setup {}
+  --   end,
+  -- },
 
   -- easymotion
   ["phaazon/hop.nvim"] = {

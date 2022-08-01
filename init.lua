@@ -2,4 +2,4 @@
 
 -- load your globals, autocmds here or anything .__.
 
--- vim.g.autosave = true
+vim.g.autosave = true

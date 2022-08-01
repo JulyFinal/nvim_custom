@@ -21,6 +21,7 @@ M.plugins = {
 }
 
 M.mappings = require "custom.mappings"
+
 M.init = require "custom.init"
 
 M.ui = {
