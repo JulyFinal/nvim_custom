@@ -48,7 +48,7 @@ return {
   -- AutoSave
   -- ["Pocco81/AutoSave.nvim"] = {
   --   config = function()
-  --     require("autosave").setup {}
+  --     require("auto-save").setup {}
   --   end,
   -- },
 
@@ -57,6 +57,12 @@ return {
     branch = "v2", -- optional but strongly recommended
     config = function()
       require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+    end,
+  },
+
+  ["karb94/neoscroll.nvim"] = {
+    config = function()
+      require("neoscroll").setup()
     end,
   },
 }
