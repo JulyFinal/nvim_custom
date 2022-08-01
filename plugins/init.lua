@@ -1,11 +1,26 @@
 return {
 
-  -- 平滑滚动
-  ["karb94/neoscroll.nvim"] = {
-    opt = true,
+  ["neovim/nvim-lspconfig"] = {
     config = function()
-      require("neoscroll").setup()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
     end,
+  },
+
+  ["williamboman/mason.nvim"] = {
+    ensure_installed = {
+      -- lua stuff
+      "lua-language-server",
+      "stylua",
+
+      -- shell
+      "shfmt",
+      "shellcheck",
+
+      -- python
+      "pyright",
+      "black",
+    },
   },
 
   ["jose-elias-alvarez/null-ls.nvim"] = {
@@ -30,14 +45,18 @@ return {
     cmd = "SudaWrite",
   },
 
-  -- 开启dashboard
-  ["goolord/alpha-nvim"] = {
-    disable = true,
-  },
-
+  -- AutoSave
   ["Pocco81/AutoSave.nvim"] = {
     config = function()
-      require("autosave").setup()
+      require("autosave").setup {}
+    end,
+  },
+
+  -- easymotion
+  ["phaazon/hop.nvim"] = {
+    branch = "v2", -- optional but strongly recommended
+    config = function()
+      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
     end,
   },
 }

@@ -54,7 +54,6 @@ M.setup = function()
   null_ls.setup {
     debug = true,
     sources = sources,
-
     -- format on save
     on_attach = function(client, bufnr)
       if client.supports_method "textDocument/formatting" then

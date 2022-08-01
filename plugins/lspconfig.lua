@@ -1,28 +1,20 @@
-local M = {}
+-- custom.plugins.lspconfig
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
-M.setup_lsp = function(attach, capabilities)
-  local lspconfig = require "lspconfig"
+local lspconfig = require "lspconfig"
 
-  -- lspservers with default config local
-  servers = {
-    "sumneko_lua",
-    "tsserver",
-    "pyright",
+local servers = {
+  "sumneko_lua",
+  "pyright",
+}
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
   }
-
-  for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-      on_attach = attach,
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-      },
-    }
-  end
-
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.offsetEncoding = { "utf-16" }
-  require("lspconfig").clangd.setup { capabilities = capabilities }
 end
-
-return M
