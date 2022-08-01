@@ -1,42 +1,43 @@
 return {
 
-   ["jose-elias-alvarez/null-ls.nvim"] = {
-      after = "nvim-lspconfig",
-      config = function()
-         require("custom.plugins.null-ls").setup()
-      end,
-   },
+  -- 平滑滚动
+  ["karb94/neoscroll.nvim"] = {
+    opt = true,
+    config = function()
+      require("neoscroll").setup()
+    end,
+  },
 
-   -- 多光标
-   ["mg979/vim-visual-multi"] = {
-      keys = "<C-n>",
-   },
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require("custom.plugins.null-ls").setup()
+    end,
+  },
 
-   -- 增删改引号
-   ["tpope/vim-surround"] = {
-      keys = { "c", "d", "S" },
-   },
+  -- 多光标
+  ["mg979/vim-visual-multi"] = {
+    keys = "<C-c>",
+  },
 
-   -- 快速选中
-   ["gcmt/wildfire.vim"] = {
-      keys = "<CR>",
-   },
+  -- 增删改引号
+  ["tpope/vim-surround"] = {
+    keys = { "c", "d", "S" },
+  },
 
-   -- 编辑只读文件
-   ["lambdalisue/suda.vim"] = {
-      cmd = "SudaWrite",
-   },
+  -- 编辑只读文件
+  ["lambdalisue/suda.vim"] = {
+    cmd = "SudaWrite",
+  },
 
-   -- 现代任务系统
-   ["skywind3000/asynctasks.vim"] = {
-      requires = "skywind3000/asyncrun.vim",
-      cmd = { "AsyncTask", "AsyncTaskEdit" },
-      opt = true,
-   },
+  -- 开启dashboard
+  ["goolord/alpha-nvim"] = {
+    disable = true,
+  },
 
-   -- 开启dashboard
-   ["goolord/alpha-nvim"] = {
-      disable = true,
-   },
-
+  ["Pocco81/AutoSave.nvim"] = {
+    config = function()
+      require("autosave").setup()
+    end,
+  },
 }

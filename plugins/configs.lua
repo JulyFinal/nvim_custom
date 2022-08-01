@@ -1,5 +1,4 @@
-
-local t = {}
+-- local t = {}
 -- Syntax: t[keys] = {function, {function arguments}}
 -- t['<A-k>'] = {'scroll', {'-vim.wo.scroll', 'true', '250'}}
 -- t['<A-j>'] = {'scroll', { 'vim.wo.scroll', 'true', '250'}}
@@ -8,4 +7,4 @@ local t = {}
 -- t['<C-y>'] = {'scroll', {'-0.10', 'false', '100'}}
 -- t['<C-e>'] = {'scroll', { '0.10', 'false', '100'}}
 
-require('neoscroll.config').set_mappings(t)
+-- require('neoscroll.config').set_mappings(t)
